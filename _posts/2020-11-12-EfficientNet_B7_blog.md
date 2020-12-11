@@ -1368,7 +1368,7 @@ print('ROC area is {0}'.format(roc_auc))
 ROC area is 0.9987891368275386
     
 
-```
+{% highlight ruby %}
 import matplotlib.pyplot as plt
 
 plt.figure()
@@ -1380,7 +1380,7 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic (DenseNet 169) ')
 plt.legend(loc="lower right")
-```
+{% endhighlight %}
 
 
 
