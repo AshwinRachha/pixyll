@@ -1,18 +1,30 @@
 
-# COVID-19 Chest Xray Detection : A Transfer Learning approach.
+# COVID-19 Chest Xray Detection : A Transfer Learning approach.
 
 
-*The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
-The exponential escalation of the spread of the disease makes it emergent for appropriate screening methods to detect the
-disease and take steps in mitigating it. The conventional testing technique involves the use of Reverse-Transcriptase
-Polymerase Chain Reaction (RT-PCR). Due to limited sensitivity it is more prone to providing high false negative rates. Also
-due to a high turnaround time (6-9 hours) and a high cost, an alternative approach for screening is called for. Chest
-radiographs are the most frequently used imaging procedures in radiology. They are cheaper compared to CT scans and are
-more readily available and accessible to the public. Application of advanced artificial intelligence (AI) techniques coupled with
-radiological imaging can be helpful for the accurate detection of this disease. In this projecct we will study how state of the art model -  EfficientNetB7 is applied to the problem of classification.*
-
-To check out my research paper on this work please refer to the following url:
-
+
+*The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
+
+The exponential escalation of the spread of the disease makes it emergent for appropriate screening methods to detect the
+
+disease and take steps in mitigating it. The conventional testing technique involves the use of Reverse-Transcriptase
+
+Polymerase Chain Reaction (RT-PCR). Due to limited sensitivity it is more prone to providing high false negative rates. Also
+
+due to a high turnaround time (6-9 hours) and a high cost, an alternative approach for screening is called for. Chest
+
+radiographs are the most frequently used imaging procedures in radiology. They are cheaper compared to CT scans and are
+
+more readily available and accessible to the public. Application of advanced artificial intelligence (AI) techniques coupled with
+
+radiological imaging can be helpful for the accurate detection of this disease. In this projecct we will study how state of the art model -  EfficientNetB7 is applied to the problem of classification.*
+
+
+
+To check out my research paper on this work please refer to the following url:
+
+
+
 https://www.irjet.net/archives/V7/i11/IRJET-V7I1144.pdf
 
 
@@ -48,8 +60,10 @@ from sklearn import metrics
 from fastai.callbacks import *
 ```
 
-# *EfficientNets*
-
+# *EfficientNets*
+
+
+
 With the rise of transfer learning, the essentiality of scaling has been deeply realised for enhancing the performance as well as efficieny of models. Traditionaly scaling can be done in three dimensions viz. depth, width and resolution in terms of convolutional neural networks. Depth scaling pertains to increasing the number of layers in the model, making it more deeper; width scaling makes the model wider (one possible way is to increase the number of channels in a layer) and resolution scaling means using high resolution images so that features are more fine-grained. Each method applied individually has some drawbacks such as in depth scaling we have the problem of vanishing gradients and in width scaling the accuracy saturates after a point and there is a limit to increasing resolution of images and a slight increase doesnt result in significant improvement of performance. Hence Efficientnets are proposed to deal with balancing all dimensions of a network during CNN scaling for getting improved accuracy and efficieny. The authors proposed a simple yet very effective scaling technique which uses a compound coefficientto uniformly scale network width, depth, and resolution in a principled way. We used the pytorch wrapper for efficientnets. To install run the following command:
 
 
@@ -63,8 +77,10 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
-Now we will define an ImageDataBunch which gets our image data into DataLoaders over which our models can be fit. We use the from_folder function to get the images from our folder which is subdivided into Train and Test folders. For image transformations we use the get_transforms function which performs various augmentations on our images viz rotation, , horizontal flip, vertical flip, zooming, warping, affine transformation etc. 
-
+Now we will define an ImageDataBunch which gets our image data into DataLoaders over which our models can be fit. We use the from_folder function to get the images from our folder which is subdivided into Train and Test folders. For image transformations we use the get_transforms function which performs various augmentations on our images viz rotation, , horizontal flip, vertical flip, zooming, warping, affine transformation etc. 
+
+
+
 The input target size of the images is defined as 224 since most models are compatible with this size including efficientnets. We maintain a Batch Size of 32 in order to ensure efficient usage of memory. 
 
 
@@ -123,32 +139,58 @@ data.valid_ds
 
 We can visualize our Training data in the following cell. 
 
-The train and validation split of the respective images is as follows.
-
-
-
-
-Split COVID-19 NO-FINDINGS PNEUMONIA
-
-
----
-
-
-Training Set 454 610 418
-
-
----
-
-
-Testing Set 41 94 82
-
-
-
----
-
-
-
-
+The train and validation split of the respective images is as follows.
+
+
+
+
+
+
+
+
+
+Split COVID-19 NO-FINDINGS PNEUMONIA
+
+
+
+
+
+---
+
+
+
+
+
+Training Set 454 610 418
+
+
+
+
+
+---
+
+
+
+
+
+Testing Set 41 94 82
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,7 +199,7 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png)
+![Test](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png "Test")
 
 
 
@@ -245,7 +287,7 @@ learn.fit_one_cycle(4)
 
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png)
+![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png)
 
 
 
@@ -254,7 +296,7 @@ learn.recorder.plot_losses()
 ```
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_24_0.png)
+![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_24_0.png)
 
 
 
@@ -263,7 +305,7 @@ learn.recorder.plot_metrics()
 ```
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_25_0.png)
+![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_25_0.png)
 
 
 Fastai comes with a very important utility of finding an appropriate learning rate and then fine tuning our models later with the set learning rate. This boosts the performance of the models significantly. 
