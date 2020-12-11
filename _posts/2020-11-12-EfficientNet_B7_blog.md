@@ -55,14 +55,14 @@ os.listdir('/content/gdrive/My Drive/Final XRAY')
 *Next up we will import all the necessary libraries. We will use the fastai library which consists of various state of the art pretrained models for image classification and a lot of utilitarian tools which make deep learning easier with less lines of code!*
 
 
-{%highlight ruby %}
+{% highlight ruby %}
 from fastai import *
 from fastai.vision import *
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import metrics
 from fastai.callbacks import *
-{% endhighlight%}
+{% endhighlight %}
 
 # *EfficientNets*
 
@@ -71,7 +71,7 @@ from fastai.callbacks import *
 With the rise of transfer learning, the essentiality of scaling has been deeply realised for enhancing the performance as well as efficieny of models. Traditionaly scaling can be done in three dimensions viz. depth, width and resolution in terms of convolutional neural networks. Depth scaling pertains to increasing the number of layers in the model, making it more deeper; width scaling makes the model wider (one possible way is to increase the number of channels in a layer) and resolution scaling means using high resolution images so that features are more fine-grained. Each method applied individually has some drawbacks such as in depth scaling we have the problem of vanishing gradients and in width scaling the accuracy saturates after a point and there is a limit to increasing resolution of images and a slight increase doesnt result in significant improvement of performance. Hence Efficientnets are proposed to deal with balancing all dimensions of a network during CNN scaling for getting improved accuracy and efficieny. The authors proposed a simple yet very effective scaling technique which uses a compound coefficientto uniformly scale network width, depth, and resolution in a principled way. We used the pytorch wrapper for efficientnets. To install run the following command:
 
 
-{% highlight python %}
+{% highlight ruby %}
 pip install efficientnet-pytorch
 
 import warnings
