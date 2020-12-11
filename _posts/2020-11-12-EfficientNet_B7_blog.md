@@ -204,6 +204,7 @@ data.show_batch(rows=3, figsize=(10,10))
 
 
 ![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png)
+![Test](/blogpost/image/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png){:class="img-responsive"}
 
 
 
