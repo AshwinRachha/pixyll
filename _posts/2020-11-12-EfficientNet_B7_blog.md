@@ -110,9 +110,9 @@ data.classes, data.c
 
 
 
-```
+{% highlight ruby %}
 data.train_ds
-```
+{% endhighlight %}
 
 
 
@@ -127,9 +127,9 @@ data.train_ds
 
 
 
-```
+{% highlight ruby %}
 data.valid_ds
-```
+{% endhighlight %}
 
 
 
@@ -200,26 +200,26 @@ Testing Set 41 94 82
 
 
 
-```
+{% highlight ruby %}
 data.show_batch(rows=3, figsize=(10,10))
-```
+{% endhighlight %}
 
 
 ![png](/blogpost/images/EfficientNet_B7_blog_17_0.png)
 
 
 
-```
+{% highlight ruby %}
 import efficientnet_pytorch
 from efficientnet_pytorch import EfficientNet
-```
+{% endhighlight %}
 
 We will use EfficientNetB7 for training. 
 
 
-```
+{% highlight ruby %}
 model = EfficientNet.from_pretrained('efficientnet-b7')
-```
+{% endhighlight %}
 
     Loaded pretrained weights for efficientnet-b7
     
@@ -227,16 +227,16 @@ model = EfficientNet.from_pretrained('efficientnet-b7')
 To better capture the essence of the performance of the model, along with traditional metrics we use the top2 accuracy which is predicted true for each image if the actual label of the image falls in the top 2 softmax probabilities of the model. 
 
 
-```
+{% highlight ruby %}
 top_5 = partial(top_k_accuracy, k=2)
 
 learn = Learner(data, model, metrics=[accuracy, top_5, error_rate], loss_func=LabelSmoothingCrossEntropy(), callback_fns=[ShowGraph, ReduceLROnPlateauCallback]).to_fp16()
-```
+{% endhighlight %}
 
 
-```
+{% highlight ruby %}
 learn.fit_one_cycle(4)
-```
+{% endhighlight %}
 
 
 <table border="1" class="dataframe">
@@ -297,18 +297,17 @@ learn.fit_one_cycle(4)
 
 
 
-```
+{% highlight ruby %}
 learn.recorder.plot_losses()
-```
+{% endhighlight %}
 
 
 ![png](/blogpost/images/EfficientNet_B7_blog_24_0.png)
 
 
-
-```
+{% highlight ruby %}
 learn.recorder.plot_metrics()
-```
+{% endhighlight %}
 
 
 ![png](/blogpost/images/EfficientNet_B7_blog_25_0.png)
@@ -317,11 +316,11 @@ learn.recorder.plot_metrics()
 Fastai comes with a very important utility of finding an appropriate learning rate and then fine tuning our models later with the set learning rate. This boosts the performance of the models significantly. 
 
 
-```
+{% highlight ruby %}
 learn.unfreeze()
 learn.lr_find()
 learn.recorder.plot(suggestion = True)
-```
+{% endhighlight %}
 
 
 
@@ -363,9 +362,9 @@ learn.recorder.plot(suggestion = True)
 
 
 
-```
+{% highlight ruby %}
 learn.fit_one_cycle(100, max_lr=slice(6.82e-6))
-```
+{% endhighlight %}
 
 
 <table border="1" class="dataframe">
@@ -1291,10 +1290,10 @@ learn.fit_one_cycle(100, max_lr=slice(6.82e-6))
 
 
 
-```
+{% highlight ruby %}
 interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix(title='Confusion matrix')
-```
+{% endhighlight %}
 
 
 
@@ -1305,7 +1304,7 @@ interp.plot_confusion_matrix(title='Confusion matrix')
 ![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_29_1.png)
 
 
-```
+{% highlight ruby %}
 probs,targets = learn.get_preds(ds_type=DatasetType.Valid) # Predicting without TTA
 
 
@@ -1327,7 +1326,7 @@ y_true1 = targets
 y_pred1 = probs
 target_names = ['Covid-19', 'No_findings', 'Pneumonia']
 print(classification_report(y_true1, y_pred1, target_names=target_names))
-```
+{% endhighlight %}
 
 217 203 0.9354838709677419
  [[41  0  0]
