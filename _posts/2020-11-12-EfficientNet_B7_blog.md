@@ -35,7 +35,9 @@ To check out my research paper on this work please refer to the following url:
 
 
 {% highlight ruby %}
+
 os.listdir('/content/gdrive/My Drive/Final XRAY')
+
 {% endhighlight %}
 
 
@@ -47,9 +49,11 @@ os.listdir('/content/gdrive/My Drive/Final XRAY')
 
 
 {% highlight ruby %}
+
 %reload_ext autoreload
 %autoreload 2
 %matplotlib inline
+
 {% endhighlight %}
 
 *Next up we will import all the necessary libraries. We will use the fastai library which consists of various state of the art pretrained models for image classification and a lot of utilitarian tools which make deep learning easier with less lines of code!*
@@ -96,7 +100,7 @@ data = ImageDataBunch.from_folder(path, train="TRAIN", valid ="TEST",
 
 {% highlight ruby %}
 data.classes, data.c
-{% endhighglight %}
+{% endhighlight %}
 
 
 
