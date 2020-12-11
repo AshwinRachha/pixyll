@@ -29,7 +29,7 @@ To check out my research paper on this work please refer to the following url:
 
 
 
-https://www.irjet.net/archives/V7/i11/IRJET-V7I1144.pdf
+<a href = 'https://www.irjet.net/archives/V7/i11/IRJET-V7I1144.pdf' > Here </a>
 
 
 
@@ -203,7 +203,7 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![png](/blogpost/images/EfficientNet_B7_blog_17_0.png'batch')
+![png](/blogpost/images/EfficientNet_B7_blog_17_0.png)
 
 
 
@@ -323,22 +323,7 @@ learn.recorder.plot(suggestion = True)
 
 
 
-    <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='1' class='' max='3' style='width:300px; height:20px; vertical-align: middle;'></progress>
-      33.33% [1/3 00:55<01:50]
-    </div>
+  
     
 <table border="1" class="dataframe">
   <thead>
@@ -362,22 +347,7 @@ learn.recorder.plot(suggestion = True)
   </tbody>
 </table><p>
 
-    <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='36' class='' max='46' style='width:300px; height:20px; vertical-align: middle;'></progress>
-      78.26% [36/46 00:45<00:12 4.5605]
-    </div>
+
     
 
 
@@ -1322,8 +1292,7 @@ learn.fit_one_cycle(100, max_lr=slice(6.82e-6))
 ```
 interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix(title='Confusion matrix')
-
-
+```
 
 
 
@@ -1334,7 +1303,7 @@ interp.plot_confusion_matrix(title='Confusion matrix')
 ![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_29_1.png)
 
 
-
+```
 probs,targets = learn.get_preds(ds_type=DatasetType.Valid) # Predicting without TTA
 
 
@@ -1358,37 +1327,34 @@ target_names = ['Covid-19', 'No_findings', 'Pneumonia']
 print(classification_report(y_true1, y_pred1, target_names=target_names))
 ```
 
-
-
-    217 203 0.9354838709677419
-    [[41  0  0]
-     [ 0 94  0]
-     [ 2 12 68]]
-                  precision    recall  f1-score   support
+217 203 0.9354838709677419
+ [[41  0  0]
+ [ 0 94  0]
+  [ 2 12 68]]
+               precision    recall  f1-score   support
     
-        Covid-19       0.95      1.00      0.98        41
-     No_findings       0.89      1.00      0.94        94
-       Pneumonia       1.00      0.83      0.91        82
+  Covid-19       0.95      1.00      0.98        41
+  No_findings    0.89      1.00      0.94        94
+  Pneumonia      1.00      0.83      0.91        82
     
-        accuracy                           0.94       217
-       macro avg       0.95      0.94      0.94       217
-    weighted avg       0.94      0.94      0.93       217
-    
-    
+   accuracy                           0.94       217
+   macro avg       0.95      0.94      0.94       217
+   weighted avg    0.94      0.94      0.93       217
+   
 
 
 
 ```
 learn.save('/content/gdrive/My Drive/Models'+ 'EfficientNetB7')
+```
 
-
-
+```
 preds,y, loss = learn.get_preds(with_loss=True)
 
+```
 
 
-
-
+```
 
 from sklearn.metrics import roc_curve, auc
 
@@ -1398,12 +1364,11 @@ fpr, tpr, thresholds = roc_curve(y, probs, pos_label=1)
 
 roc_auc = auc(fpr, tpr)
 print('ROC area is {0}'.format(roc_auc))
-
-
-    ROC area is 0.9987891368275386
+```
+ROC area is 0.9987891368275386
     
 
-
+```
 import matplotlib.pyplot as plt
 
 plt.figure()
@@ -1416,12 +1381,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic (DenseNet 169) ')
 plt.legend(loc="lower right")
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x7fe4caf5e400>
-
 
 
 
