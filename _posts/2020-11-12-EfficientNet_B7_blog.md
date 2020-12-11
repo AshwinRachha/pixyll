@@ -1301,7 +1301,7 @@ interp.plot_confusion_matrix(title='Confusion matrix')
 
 
 
-![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_29_1.png)
+![png](/blogpost/images/EfficientNet_B7_blog_29_1.png)
 
 
 {% highlight ruby %}
@@ -1385,7 +1385,7 @@ plt.legend(loc="lower right")
 
 
 
-![png](/blogpost/images//EfficientNet_B7_blog_36_1.png)
+![png](/blogpost/images/EfficientNet_B7_blog_36_1.png)
 
 
 
