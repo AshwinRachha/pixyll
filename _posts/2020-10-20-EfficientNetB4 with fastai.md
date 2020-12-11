@@ -1,5 +1,6 @@
 
 ---
+
 layout:     post
 title:      Cassava Leaf Disease Detection using Transfer Learning (EfficientNetB4)
 date:       2020-10-20 12:32:18
