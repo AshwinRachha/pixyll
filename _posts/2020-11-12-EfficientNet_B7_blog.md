@@ -203,7 +203,7 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png "Test")
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png)
 
 
 
@@ -291,7 +291,7 @@ learn.fit_one_cycle(4)
 
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png "desk")
 
 
 
