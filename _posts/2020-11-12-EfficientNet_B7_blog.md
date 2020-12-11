@@ -203,8 +203,7 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_17_0.png, "desk")
-![Test](/blogpost/image/EfficientNet_B7_blog_17_0.png){:class="img-responsive"}
+![png](/blogpost/images/EfficientNet_B7_blog_17_0.png'batch')
 
 
 
@@ -292,7 +291,7 @@ learn.fit_one_cycle(4)
 
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_23_1.png "desk")
+![png](/blogpost/images/EfficientNet_B7_blog_23_1.png)
 
 
 
@@ -301,7 +300,7 @@ learn.recorder.plot_losses()
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_24_0.png)
+![png](/blogpost/images/EfficientNet_B7_blog_24_0.png)
 
 
 
@@ -310,7 +309,7 @@ learn.recorder.plot_metrics()
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_25_0.png)
+![png](/blogpost/images/EfficientNet_B7_blog_25_0.png)
 
 
 Fastai comes with a very important utility of finding an appropriate learning rate and then fine tuning our models later with the set learning rate. This boosts the performance of the models significantly. 
@@ -1319,10 +1318,13 @@ learn.fit_one_cycle(100, max_lr=slice(6.82e-6))
 
 
 
+
 ```
 interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix(title='Confusion matrix')
-```
+
+
+
 
 
 
@@ -1333,16 +1335,9 @@ interp.plot_confusion_matrix(title='Confusion matrix')
 
 
 
-```
 probs,targets = learn.get_preds(ds_type=DatasetType.Valid) # Predicting without TTA
-```
 
 
-
-
-
-
-```
 probs = np.argmax(probs, axis=1)
 correct = 0
 for idx, pred in enumerate(probs):
@@ -1363,6 +1358,8 @@ target_names = ['Covid-19', 'No_findings', 'Pneumonia']
 print(classification_report(y_true1, y_pred1, target_names=target_names))
 ```
 
+
+
     217 203 0.9354838709677419
     [[41  0  0]
      [ 0 94  0]
@@ -1381,22 +1378,18 @@ print(classification_report(y_true1, y_pred1, target_names=target_names))
 
 
 
-
 ```
 learn.save('/content/gdrive/My Drive/Models'+ 'EfficientNetB7')
-```
 
 
-```
+
 preds,y, loss = learn.get_preds(with_loss=True)
-```
 
 
 
 
 
 
-```
 from sklearn.metrics import roc_curve, auc
 
 probs = np.exp(preds[:,1])
@@ -1405,13 +1398,12 @@ fpr, tpr, thresholds = roc_curve(y, probs, pos_label=1)
 
 roc_auc = auc(fpr, tpr)
 print('ROC area is {0}'.format(roc_auc))
-```
+
 
     ROC area is 0.9987891368275386
     
 
 
-```
 import matplotlib.pyplot as plt
 
 plt.figure()
@@ -1437,6 +1429,3 @@ plt.legend(loc="lower right")
 
 
 
-```
-
-```
