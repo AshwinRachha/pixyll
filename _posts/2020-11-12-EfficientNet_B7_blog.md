@@ -1,8 +1,11 @@
 ---
-layout: post
-title: COVID-19 Chest Xray Detection : A Transfer Learning approach.
-tags: deep learning
+layout:     post
+title:      Covid 19 Xray Detection
+date:       2020-11-1 11:21:29
+summary:    We learn how to classify covid, pneumonia and no findings images using efficientnets.
+categories: jekyll pixyll
 ---
+
 
 *The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
 
