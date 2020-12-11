@@ -1,20 +1,14 @@
 
 ---
-
 layout:     post
-title:      Cassava Leaf Disease Detection using Transfer Learning (EfficientNetB4)
-date:       2020-10-20 12:32:18
-summary:    Image Classification
-
+title:      Cassava Leaf Disease Classification with EfficientNetB4.
+date:       2020-07-11
+summary:    Cassava is the second largest provider of carbohydrates in the continent of Africa and is key to growth of small farmers because it can withstand harsh conditions.
+categories: jekyll pixyll
 ---
 
-Cassava is the second largest provider of carbohydrates in the continent of Africa and is key to growth of small farmers because it can withstand harsh conditions. A major percentage of farmers rely on growing this crop but its vulnerability to viral diseases is a major impediment for growth. Image recognition is a fast and inexpensive means of screening the crops for any present viral disease and can offer means to mitigate the spread of the disease by take effective and immediate remedial actions. Transfer learning has proven to be one of the most effective methods in various fields of computer vision in recent times. In this kernel we fine tune an EfficientNet based model to achieve fair results on the Cassava Leaf Disease Classification Dataset. The program is written in fastai.
 
-{% highlight python linenos %}
-%reload_ext autoreload
-%autoreload 2
-%matplotlib inline
-{% endhighlight %}
+Cassava is the second largest provider of carbohydrates in the continent of Africa and is key to growth of small farmers because it can withstand harsh conditions. A major percentage of farmers rely on growing this crop but its vulnerability to viral diseases is a major impediment for growth. Image recognition is a fast and inexpensive means of screening the crops for any present viral disease and can offer means to mitigate the spread of the disease by take effective and immediate remedial actions. Transfer learning has proven to be one of the most effective methods in various fields of computer vision in recent times. In this kernel we fine tune an EfficientNet based model to achieve fair results on the Cassava Leaf Disease Classification Dataset. The program is written in fastai.
 
 ```python
 %reload_ext autoreload
@@ -438,7 +432,7 @@ learn.fine_tune(10,base_lr=1e-2)
 learn.recorder.plot_loss()
 ```
 
-![Test](/blog/img/efficientnet-b4-integrated-with-fastai (2)_35_0.png, "Test")
+![Test](/blog/img/efficientnet-b4-integrated-with-fastai (2)_35_0.png "Test")
 
 
 Fastai provides an easy functionality to plot the confusion matrix. This matrix gives an indication of actually predicted classes and the classes which belong to one class but have been misclassified as another. The diagonal pertains to all the images that have been rightly classified.
@@ -457,7 +451,7 @@ interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix()
 ```
 
-![Test](/blog/img/efficientnet-b4-integrated-with-fastai%20(2)_38_0.png, "Test")
+![Test](/blog/img/efficientnet-b4-integrated-with-fastai%20(2)_38_0.png "Test")
 
 
 Now we will make our submissions
