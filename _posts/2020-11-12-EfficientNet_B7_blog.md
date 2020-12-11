@@ -1,7 +1,8 @@
-
-# COVID-19 Chest Xray Detection : A Transfer Learning approach.
-
-
+---
+layout: post
+title: COVID-19 Chest Xray Detection : A Transfer Learning approach.
+tags: deep learning
+---
 
 *The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
 
