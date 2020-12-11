@@ -203,8 +203,8 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png)
-![Test](/blogpost/image/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png){:class="img-responsive"}
+![desk](/blogpost/images/EfficientNet_B7_blog_17_0.png, "desk")
+![Test](/blogpost/image/EfficientNet_B7_blog_17_0.png){:class="img-responsive"}
 
 
 
@@ -292,7 +292,7 @@ learn.fit_one_cycle(4)
 
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png "desk")
+![desk](/blogpost/images/EfficientNet_B7_blog_23_1.png "desk")
 
 
 
@@ -301,7 +301,7 @@ learn.recorder.plot_losses()
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_24_0.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_24_0.png)
 
 
 
@@ -310,7 +310,7 @@ learn.recorder.plot_metrics()
 ```
 
 
-![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_25_0.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_25_0.png)
 
 
 Fastai comes with a very important utility of finding an appropriate learning rate and then fine tuning our models later with the set learning rate. This boosts the performance of the models significantly. 
@@ -388,7 +388,7 @@ learn.recorder.plot(suggestion = True)
     
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_27_2.png)
+![png](/blogpost/images/EfficientNet_B7_blog_27_2.png)
 
 
 
@@ -1315,7 +1315,7 @@ learn.fit_one_cycle(100, max_lr=slice(6.82e-6))
 
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_28_1.png)
+![png](/blogpost/images/EfficientNet_B7_blog_28_1.png)
 
 
 
@@ -1329,7 +1329,7 @@ interp.plot_confusion_matrix(title='Confusion matrix')
 
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_29_1.png)
+![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_29_1.png)
 
 
 
@@ -1433,7 +1433,7 @@ plt.legend(loc="lower right")
 
 
 
-![png](EfficientNet_B7_blog_files/EfficientNet_B7_blog_36_1.png)
+![png](/blogpost/images//EfficientNet_B7_blog_36_1.png)
 
 
 
