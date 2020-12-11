@@ -203,7 +203,7 @@ data.show_batch(rows=3, figsize=(10,10))
 ```
 
 
-![Test](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png "Test")
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_17_0.png "Test")
 
 
 
@@ -291,7 +291,7 @@ learn.fit_one_cycle(4)
 
 
 
-![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_23_1.png)
 
 
 
@@ -300,7 +300,7 @@ learn.recorder.plot_losses()
 ```
 
 
-![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_24_0.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_24_0.png)
 
 
 
@@ -309,7 +309,7 @@ learn.recorder.plot_metrics()
 ```
 
 
-![png](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_25_0.png)
+![desk](/blogpost/images/EfficientNet_B7_blog_files/EfficientNet_B7_blog_25_0.png)
 
 
 Fastai comes with a very important utility of finding an appropriate learning rate and then fine tuning our models later with the set learning rate. This boosts the performance of the models significantly. 
