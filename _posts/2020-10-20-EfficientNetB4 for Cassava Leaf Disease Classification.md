@@ -1,6 +1,6 @@
 
 ---
-layout:     post
+layout: post
 title:      Cassava Leaf Disease Classification with EfficientNetB4.
 date:       2020-07-11 12:31:19
 summary:    Cassava is the second largest provider of carbohydrates in the continent of Africa and is key to growth.
