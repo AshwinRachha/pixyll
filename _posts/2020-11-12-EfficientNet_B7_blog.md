@@ -7,7 +7,7 @@ categories: jekyll pixyll
 ---
 
 
-*The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
+The coronavirus outbreak has caused a devastating effect on people all around the world and has infected millions.
 
 The exponential escalation of the spread of the disease makes it emergent for appropriate screening methods to detect the
 
@@ -21,7 +21,7 @@ radiographs are the most frequently used imaging procedures in radiology. They a
 
 more readily available and accessible to the public. Application of advanced artificial intelligence (AI) techniques coupled with
 
-radiological imaging can be helpful for the accurate detection of this disease. In this projecct we will study how state of the art model -  EfficientNetB7 is applied to the problem of classification.*
+radiological imaging can be helpful for the accurate detection of this disease. In this projecct we will study how state of the art model -  EfficientNetB7 is applied to the problem of classification.
 
 
 
@@ -34,9 +34,9 @@ To check out my research paper on this work please refer to the following url:
 
 
 
-```
+{% highlight ruby %}
 os.listdir('/content/gdrive/My Drive/Final XRAY')
-```
+{% endhighlight %}
 
 
 
@@ -46,23 +46,23 @@ os.listdir('/content/gdrive/My Drive/Final XRAY')
 
 
 
-```
+{% highlight ruby %}
 %reload_ext autoreload
 %autoreload 2
 %matplotlib inline
-```
+{% endhighlight %}
 
 *Next up we will import all the necessary libraries. We will use the fastai library which consists of various state of the art pretrained models for image classification and a lot of utilitarian tools which make deep learning easier with less lines of code!*
 
 
-```
+{%highlight ruby %}
 from fastai import *
 from fastai.vision import *
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import metrics
 from fastai.callbacks import *
-```
+{% endhighlight%}
 
 # *EfficientNets*
 
@@ -71,15 +71,13 @@ from fastai.callbacks import *
 With the rise of transfer learning, the essentiality of scaling has been deeply realised for enhancing the performance as well as efficieny of models. Traditionaly scaling can be done in three dimensions viz. depth, width and resolution in terms of convolutional neural networks. Depth scaling pertains to increasing the number of layers in the model, making it more deeper; width scaling makes the model wider (one possible way is to increase the number of channels in a layer) and resolution scaling means using high resolution images so that features are more fine-grained. Each method applied individually has some drawbacks such as in depth scaling we have the problem of vanishing gradients and in width scaling the accuracy saturates after a point and there is a limit to increasing resolution of images and a slight increase doesnt result in significant improvement of performance. Hence Efficientnets are proposed to deal with balancing all dimensions of a network during CNN scaling for getting improved accuracy and efficieny. The authors proposed a simple yet very effective scaling technique which uses a compound coefficientto uniformly scale network width, depth, and resolution in a principled way. We used the pytorch wrapper for efficientnets. To install run the following command:
 
 
-```
+{% highlight python %}
 pip install efficientnet-pytorch
-```
 
-
-```
 import warnings
 warnings.filterwarnings('ignore')
-```
+{% endhighlight %}
+
 
 Now we will define an ImageDataBunch which gets our image data into DataLoaders over which our models can be fit. We use the from_folder function to get the images from our folder which is subdivided into Train and Test folders. For image transformations we use the get_transforms function which performs various augmentations on our images viz rotation, , horizontal flip, vertical flip, zooming, warping, affine transformation etc. 
 
@@ -88,17 +86,17 @@ Now we will define an ImageDataBunch which gets our image data into DataLoaders 
 The input target size of the images is defined as 224 since most models are compatible with this size including efficientnets. We maintain a Batch Size of 32 in order to ensure efficient usage of memory. 
 
 
-```
+{% highlight ruby %}
 path = '/content/gdrive/My Drive/Final XRAY'
 np.random.seed(44)
 data = ImageDataBunch.from_folder(path, train="TRAIN", valid ="TEST",
         ds_tfms=get_transforms(), size=(224,224), bs=32, num_workers=4).normalize()
-```
+{% endhighlight %}
 
 
-```
+{% highlight ruby %}
 data.classes, data.c
-```
+{% endhighglight %}
 
 
 
