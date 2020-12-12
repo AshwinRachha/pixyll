@@ -1,5 +1,4 @@
 
-
 ---
 layout:     post
 title:      So, What is Jekyll?
