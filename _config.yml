@@ -12,8 +12,8 @@ permalink: pretty
 paginate: 7
 date_format: "%b %-d, %Y"
 header_pages:
- - about.md
- - contact.html
+ - resume.html
+
 
 # Google services
 google_verification:
