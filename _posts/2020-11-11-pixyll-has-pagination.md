@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Detecting Insincere Questions with Long Short Term Memory Networks and Glove Embeddings
+title:      Detecting Insincere Questions with LSTMs.
 date:       2020-11-11 11:21:29
 summary:    In this project we see how text classification is done using Word Embeddings and LSTMs.
 categories: jekyll pixyll
