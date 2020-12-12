@@ -21,7 +21,7 @@ warnings.filterwarnings('ignore')
 print('Libraries imported')
 {% endhighlight %}
 
-# Task 2: Hyperparameters
+Task 2: Hyperparameters
 
 
 {% highlight ruby %}
@@ -30,7 +30,7 @@ batch_size = 300
 iterations = 40
 {% endhighlight %}
 
-# Task 3: Dataset
+Task 3: Dataset
 
 
 {% highlight ruby %}
@@ -55,7 +55,7 @@ helpers.plt.show_example(X_train[0], Y_train[0])
 helpers.plt.show_example(X_train[-1], Y_train[-1])
 {% endhighlight %}
 
-# Task 4: A Mini Batch of Examples
+Task 4: A Mini Batch of Examples
 
 
 {% highlight ruby %}
@@ -76,7 +76,7 @@ X_batch, Y_batch = helpers.dataset.get_random_batch(X_train, Y_train, 10)
 helpers.plt.show_ten_examples(X_batch, Y_batch, Y_batch)
 {% endhighlight %}
 
-# Task 5: Create Model
+Task 5: Create Model
 
 
 {% highlight ruby %}
@@ -99,7 +99,7 @@ model = LogisticModel(num_features=784)
 model.summary()
 {% endhighlight %}
 
-# Task 6: Forward Pass
+Task 6: Forward Pass
 
 
 {% highlight ruby %}
@@ -116,7 +116,7 @@ class LogisticModel(LogisticModel):
         return A, loss
 {% endhighlight %}
 
-# Task 7: Backward Pass
+Task 7: Backward Pass
 
 
 {% highlight ruby %}
@@ -129,7 +129,7 @@ class LogisticModel(LogisticModel):
         return dW, db
 {% endhighlight %}
 
-# Task 8: Update Parameters
+Task 8: Update Parameters
 
 
 {% highlight ruby %}
@@ -139,7 +139,7 @@ class LogisticModel(LogisticModel):
         self.b -= lr * db
 {% endhighlight %}
 
-# Task 9: Check Model Performance
+Task 9: Check Model Performance
 
 
 {% highlight ruby %}
@@ -172,7 +172,7 @@ preds, _ = model.predict(X)
 helpers.plt.show_ten_examples(X, Y, preds)
 {% endhighlight %}
 
-# Task 10: Training Loop
+Task 10: Training Loop
 
 
 {% highlight ruby %}
@@ -199,7 +199,7 @@ class LogisticModel(LogisticModel):
         print('Training finished.')
 {% endhighlight %}
 
-# Task 11: Training the Model
+Task 11: Training the Model
 
 
 {% highlight ruby %}
@@ -227,4 +227,4 @@ helpers.plt.plot_metrics(model)
 X, Y = helpers.dataset.get_random_batch(X_test, Y_test, batch_size)
 preds, _ = model.predict(X)
 helpers.plt.show_ten_examples(X, Y, preds)
-{%  %}
+{% endhighlight %}
