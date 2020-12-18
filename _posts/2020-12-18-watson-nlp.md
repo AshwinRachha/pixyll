@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Contradictory, My Dear Watson.
+date:       2014-06-11 15:31:19
+summary:    Detecting contradiction from a given premise and hypothesis using transformers. 
+categories: jekyll pixyll
+---
+
 
 Let's add the libraries where they are really needed, not all of them at the first line
 
