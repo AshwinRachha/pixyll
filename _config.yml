@@ -9,7 +9,7 @@ url: "http://ashwinrachha.github.io"
 # Build settings
 markdown: kramdown
 permalink: pretty
-paginate: 7
+paginate: 10
 date_format: "%b %-d, %Y"
 header_pages:
  - resume.html
