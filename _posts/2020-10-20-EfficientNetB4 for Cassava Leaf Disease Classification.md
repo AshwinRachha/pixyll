@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Cassava Leaf Disease Detection.
-date:       2014-06-09 12:32:18
+date:       2020-12-02 12:32:18
 summary:    Using EfficientNetB4 to make leaf disease predictions.
 categories: jekyll pixyll
 ---
