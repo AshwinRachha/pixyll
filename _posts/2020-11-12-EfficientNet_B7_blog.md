@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Covid 19 Xray Detection
-date:       2020-11-1 11:21:29
+date:       2020-11-11 11:21:29
 summary:    We learn how to classify covid, pneumonia and no findings images using efficientnets.
 categories: jekyll pixyll
 ---
