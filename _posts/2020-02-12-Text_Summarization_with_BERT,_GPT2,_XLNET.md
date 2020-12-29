@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Please cut it short for me!
-date:       2020-02-12 12:32:18
+date:       2020-07-12 12:32:18
 summary:    Extractive summarization with BERT and GPT2.
 categories: jekyll pixyll
 ---
