@@ -1,5 +1,10 @@
-# Addition and Subtraction using Recurrent Neural Networks.
-
+---
+layout:     post
+title:      Addition and Subtraction using Recurrent Neural Networks
+date:       2022-01-23 12:31:19
+summary:    Leveraging the Power of RNNs using Pytorch to perform sequence classification.
+categories: jekyll pixyll
+---
 
 
 ![](https://blog.floydhub.com/content/images/2019/04/Slide9.jpg)
