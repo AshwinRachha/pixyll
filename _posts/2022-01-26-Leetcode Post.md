@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Daily Leetcode Post
+date:       2020-04-09 12:32:18
+summary:    Just Practicing DSA Questions
+categories: jekyll pixyll
+---
+
 ## All elements in two binary search trees.
 
 Given two binary search trees `root1` and `root2`, return *a list containing all the integers from both trees sorted in **ascending** order*.
