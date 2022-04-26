@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Lets just refrain from using the same ole MNIST XO!
+date:       2022-04-26 12:32:18
+summary:    Creating a Custom Dataset for Image Classification
+categories: jekyll pixyll
+---
+
 
 In this Post we will create an Annotated Image Dataset of our own for the task of Image Classification. A lot of tutorials out there cover how the use those complex Computer Vision Models on the most basic Datasets. The MNIST and CIFAR10 datasets must have been dragged way to much than they should have and now its time we move away from them and work on some real world data. 
 
