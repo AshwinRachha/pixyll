@@ -14,7 +14,7 @@ The basic steps for data collections we are going to take is:
 1. Use DuckDuckGo to search for images of 'batman'
 2. Use DuckDuckGo to search for images of 'superman'
 3. Fine-tune a pretrained neural network to recognize these two groups.
-4. Try running this model on a picture of a bird and see if it works. 
+4. Try running this model on a picture of a the dark knight and see if it works. 
 
 
 ```python
